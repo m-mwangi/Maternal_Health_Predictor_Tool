@@ -8,12 +8,13 @@ The dataset was sourced from Kaggle
 🔗 [Maternal Health Risk Dataset](https://www.kaggle.com/datasets/csafrit2/maternal-health-risk-data/data)  
 
 It contains the following features:
-- Age  
-- Systolic and Diastolic Blood Pressure  
-- Blood Sugar Levels  
-- Body Temperature  
-- Heart Rate  
-- Risk Level (Low, Medium, High)  
+- Age: This is the age in years when a woman is pregnant.
+- Systolic Blood Pressure: The upper value of Blood Pressure in mmHg.
+- Diastolic Blood Pressure: Lower value of Blood Pressure in mmHg.
+- Blood Sugar Levels: Measured in terms of molar concentration, mmol/L.
+- Body Temperature: Measured in Fahrenheit.
+- Heart Rate: A normal resting heart rate in beats per minute.
+- Risk Level: Predicted Risk Intensity Level during pregnancy, considering the previous attributes. Categorized as either 'High Risk', 'Low Risk', or 'Mid Risk'.
 
 ## Preprocessing Steps  
 
