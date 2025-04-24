@@ -14,8 +14,7 @@
             <div class="header-right">
                 <a id="home" class="active" href="#home">Home</a>
                 <a href="{{ url_for('preprocess') }}">Pre-Process</a>
-                <a href="{{ url_for('visualizations') }}">Visualizations</a>
-                <a href="{{ url_for('retrain') }}">Re-Train</a>
+                <!-- Removed the link to Re-Train and Visualizations -->
                 <a href="{{ url_for('predict') }}">Predict</a>
             </div>
         </div>
@@ -94,17 +93,14 @@
     <div id="services" class="container-fluid text-center">
         <div class="row">
             <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-             
                 <h3>✨ Accurate Predictions</h3>
                 <p>AI-powered insights trained on real maternal health data.</p>
             </div>
             <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                
                 <h3>🩺 Easy-to-Use Interface</h3>
                 <p>A simple, user-friendly experience designed for expectant mothers.</p>
             </div>
             <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                
                 <h3>👩‍⚕️ Proactive Maternal Care</h3>
                 <p>Stay informed and take action when it matters most.</p>
             </div>
@@ -126,8 +122,6 @@
             <ul>
                 <li><a class="active" href="#home">Home</a></li>
                 <li><a href="{{ url_for('preprocess') }}">Pre-process</a></li>
-                <li><a href="{{ url_for('visualizations') }}">Visualizations</a></li>
-                <li><a href="{{ url_for('retrain') }}">Re-train</a></li>
                 <li><a href="{{ url_for('predict') }}">Predict</a></li>
             </ul>
         </div>
