@@ -1,16 +1,10 @@
-# Maternal Health Predictor Tool – Data Documentation
+# Maternal Health Predictor Tool (MaternAI) – Data Documentation
 
-## 📊 Cleaned Dataset  
-The cleaned dataset used in this project is included as `cleaned_maternal_health_data.csv` in the `/backend/models/` folder.
+## Data Sources and Collection Methods  
 
----
+The dataset was sourced from the [Maternal Health Risk Data Set on Kaggle](https://www.kaggle.com/datasets/andrewmvd/maternal-health-risk-data). 
 
-## 📥 Data Sources and Collection Methods  
-
-The dataset used was sourced from the [Maternal Health Risk Data Set on Kaggle](https://www.kaggle.com/datasets/andrewmvd/maternal-health-risk-data). It contains clinical and physiological information relevant to maternal health risk prediction.
-
-The original dataset includes features such as:
-
+It contains the following features:
 - Age  
 - Systolic and Diastolic Blood Pressure  
 - Blood Sugar Levels  
@@ -18,24 +12,15 @@ The original dataset includes features such as:
 - Heart Rate  
 - Risk Level (Low, Medium, High)  
 
-This dataset was downloaded directly from Kaggle and used under its open-source license for educational purposes.
+## Preprocessing Steps  
 
----
+To prepare the data for training, the following preprocessing steps were taken:
 
-## 🧹 Preprocessing Steps  
-
-To prepare the data for modeling, the following preprocessing steps were taken:
-
-- **Missing Value Handling**: Checked for null/missing values and confirmed none existed.  
-- **Outlier Removal**: Applied interquartile range (IQR) technique to identify and remove extreme outliers, particularly in heart rate and blood pressure values.  
-- **Categorical Encoding**:  
-  - The `RiskLevel` categorical feature (`Low`, `Medium`, `High`) was encoded into numerical labels (`0`, `1`, `2`) using Label Encoding.  
-- **Feature Scaling**:  
-  - Standardization (z-score scaling) was applied using `StandardScaler` from scikit-learn to normalize features such as age, blood pressure, sugar levels, and heart rate.  
-- **Data Splitting**:  
-  - The cleaned dataset was split into training and test sets (80% training, 20% testing) to evaluate model performance.  
-
----
+- **Handling Missing Values**: Checked for null/missing values and confirmed none existed.  
+- **Outlier Removal**: Applied interquartile range (IQR) technique to identify and remove extreme outliers, particularly in heart rate and body temperature values.  
+- **Categorical Encoding**: The `RiskLevel` categorical feature (`Low`, `Medium`, `High`) was encoded into numerical labels (`0`, `1`, `2`) using Label Encoding.  
+- **Feature Scaling**: Standardization was applied using `StandardScaler` from scikit-learn to normalize the features.  
+- **Data Splitting**: The cleaned dataset was split into training and test sets (80% training, 20% testing) to evaluate model performance.  
 
 ## 📈 Visualizations and Data Trends  
 
