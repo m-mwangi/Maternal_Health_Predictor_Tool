@@ -1,4 +1,4 @@
-# Maternal Health Predictor Tool (MaternAI) – Data Documentation
+# Maternal Health Risk Predictor Tool (MaternAI) – Data Documentation
 
 MaternAI is an ML-powered application designed to predict maternal health risks. It classifies patients into different risk levels: High Risk, Mid Risk, and Low Risk. It also contains a web application based on Flask where users can input different values to predict risks.
 
@@ -45,10 +45,3 @@ To better understand data trends and correlations between features, the followin
 
 5. **Histogram**
    - It enabled us to see the class distribution, ensuring that there was no class imbalance.
-     
-## 🗂 Files in This Section  
-
-- `cleaned_maternal_health_data.csv`: Final cleaned dataset used for model training and prediction.  
-- `visualizations/`: Folder (optional) containing saved PNG/JPEG plots showing histograms, scatter plots, and boxplots.  
-
----
