@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pre-Processing - Maternal Health Risk Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo" alt="Logo" />
+            <div class="header-right">
+                <a id="home" href="/">Home</a>
+                <a class="active" href="/preprocess">Pre-Process</a>
+                <a href="/visualizations">Visualizations</a>
+                <a href="/retrain">Re-Train</a>
+                <a href="/predict">Predict</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About the Data Section -->
+    <section class="about-data">
+        <div class="container mt-5">
+            <h2 class="section-title text-center">Understanding the Dataset</h2>
+            <p class="text-center mt-3">
+                The dataset used for maternal health risk prediction was sourced from <strong>Kaggle</strong> 
+                and comprises <strong>1,014 records</strong> with <strong>6 key health indicators</strong> and a target classification.
+            </p>
+            <p class="text-center">
+                The features included in this dataset are:
+                <strong>Blood Pressure (SystolicBp, DiastolicBP), Body Temperature, Blood Sugar, Heart Rate,</strong> and <strong>Age</strong>.
+                The output variable, <strong>Risk Level</strong>, categorizes maternal health risks into three distinct groups:
+            </p>
+            <ul class="text-center">
+                <li><strong style="color: red;">High Risk:</strong> Requires urgent medical attention.</li>
+                <li><strong style="color: orange;">Mid Risk:</strong> Needs monitoring and lifestyle adjustments.</li>
+                <li><strong style="color: green;">Low Risk:</strong> Indicates stable maternal health.</li>
+            </ul>
+            <p class="text-center">
+                This project aims to leverage machine learning techniques to predict maternal risk levels 
+                accurately, thus enabling real-time interventions and improved maternal healthcare outcomes.
+            </p>
+        </div>
+    </section>
+
+    <!-- Dataset Statistics -->
+    <div class="fact-table">
+        <div class="fact-row">
+            <div class="fact-cell">
+                <div class="single-fact-counter-inner">
+                    <div class="single-fact-counter-icon">
+                        <span class="fas fa-database"></span>
+                    </div>
+                    <div class="outer-box">
+                        <div class="count-outer count-box">
+                            <span class="count-text"><span>1014</span></span>
+                        </div>
+                        <div class="title"><p>Rows</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="fact-cell">
+                <div class="single-fact-counter-inner">
+                    <div class="single-fact-counter-icon">
+                        <span class="fas fa-chart-bar"></span>
+                    </div>
+                    <div class="outer-box">
+                        <div class="count-outer count-box">
+                            <span class="count-text"><span>0</span></span>
+                        </div>
+                        <div class="title"><p>Missing Values</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fact-row">
+            <div class="fact-cell">
+                <div class="single-fact-counter-inner">
+                    <div class="single-fact-counter-icon">
+                        <span class="fas fa-columns"></span>
+                    </div>
+                    <div class="outer-box">
+                        <div class="count-outer count-box">
+                            <span class="count-text"><span>7</span></span>
+                        </div>
+                        <div class="title"><p>Columns</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="fact-cell">
+                <div class="single-fact-counter-inner">
+                    <div class="single-fact-counter-icon">
+                        <span class="fas fa-exclamation-circle"></span>
+                    </div>
+                    <div class="outer-box">
+                        <div class="count-outer count-box">
+                            <span class="count-text"><span>433</span></span>
+                        </div>
+                        <div class="title"><p>Outliers Detected</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Preprocessing Steps -->
+    <section class="preprocessing-steps bg-light py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Data Pre-processing Steps</h2>
+            <div class="row mt-4">
+                <!-- Step 1 -->
+                <div class="col-md-6 d-flex align-items-center mb-4">
+                    <img src="{{ url_for('static', filename='images/loading.png') }}" class="img-fluid step-image" alt="Data Loading" />
+                </div>
+                <div class="col-md-6">
+                    <h3>1. Data Loading</h3>
+                    <p>- The dataset is loaded into a Pandas dataframe.</p>
+                    <p>- This allows easy manipulation of the data.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Step 2 -->
+                <div class="col-md-6 d-flex align-items-center order-md-2 mb-4">
+                    <img src="{{ url_for('static', filename='images/inspect.png') }}" class="img-fluid step-image" alt="Inspect Data" />
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h3>2. Inspecting Data</h3>
+                    <p>- We analyze distributions, missing values, and structure using statistical summaries and visualizations.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Step 3 -->
+                <div class="col-md-6 d-flex align-items-center mb-4">
+                    <img src="{{ url_for('static', filename='images/encoding.png') }}" class="img-fluid step-image" alt="Encoding" />
+                </div>
+                <div class="col-md-6">
+                    <h3>3. Encoding Categorical Variables</h3>
+                    <p>- The categorical variable (Risk Level) is converted into numerical values.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Step 4 -->
+                <div class="col-md-6 d-flex align-items-center order-md-2 mb-4">
+                    <img src="{{ url_for('static', filename='images/outliers.png') }}" class="img-fluid step-image" alt="Check for Outliers" />
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h3>4. Checking for Outliers</h3>
+                    <p>- Outliers are identified using boxplots.</p>
+                    <p>- They are capped to prevent skewing model performance.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Step 5 -->
+                <div class="col-md-6 d-flex align-items-center mb-4">
+                    <img src="{{ url_for('static', filename='images/scaler.jpg') }}" class="img-fluid step-image" alt="Scaling" />
+                </div>
+                <div class="col-md-6">
+                    <h3>5. Scaling the Data</h3>
+                    <p>- Standard Scaling is applied to normalize feature ranges for uniformity.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Step 6 -->
+                <div class="col-md-6 d-flex align-items-center order-md-2 mb-4">
+                    <img src="{{ url_for('static', filename='images/imbalance.png') }}" class="img-fluid step-image" alt="Balancing Using SMOTE" />
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h3>6. Balancing the Dataset</h3>
+                    <p>- SMOTE generates synthetic samples for the underrepresented classes.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Step 7 -->
+                <div class="col-md-6 d-flex align-items-center mb-4">
+                    <img src="{{ url_for('static', filename='images/splitting.png') }}" class="img-fluid step-image" alt="Split Data" />
+                </div>
+                <div class="col-md-6">
+                    <h3>7. Splitting the Data</h3>
+                    <p>- The dataset is split into training, validation, and testing sets.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Step 8 -->
+                <div class="col-md-6 d-flex align-items-center mb-4">
+                    <img src="{{ url_for('static', filename='images/models.webp') }}" class="img-fluid step-image" alt="Save Scaler" />
+                </div>
+                <div class="col-md-6">
+                    <h3>8. Dive into Building the Model</h3>
+                    <p>- The preprocessing process is complete.
+                    <p>- Begin training your model!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+		<footer class="footer">
+			<div class="copyright">
+				<img src="{{ url_for('static', filename='images/logo.png') }}" alt="" />
+				<h2>&copy; 2025 | MaternAI: Smarter Maternal Health</h2>
+			</div>
+			<div class="else">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li>
+						<a class="active" href="{{ url_for('preprocess') }}">Pre-process</a>
+					</li>
+					<li>
+					<a href="{{ url_for('visualizations') }}">Visualizations</a>
+                    </li>
+					<li><a href="{{ url_for('retrain') }}">Re-train</a></li>
+					<li><a href="{{ url_for('predict') }}">Predict</a></li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
