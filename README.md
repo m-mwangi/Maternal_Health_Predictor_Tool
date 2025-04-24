@@ -32,20 +32,20 @@ To better understand data trends and correlations between features, the followin
 1. **Correlation Heatmap**
    - Displays the correlation between various features in the dataset.
    - There is a positive correlation between the input variables and the output variable.
-   - The strongest one is in Blood Sugar with 0.58 and the weakest correlation are in Body Temperature and Heart Rate with values of 0.14 and 0.18 respectively.
-   - Stystolic BP and Diastolic BP are strongly correlated with value of 0.8. As Systolic BP increases, Diastolic BP also tends to increase.
+   - The strongest one is in Blood Sugar with 0.58, and the weakest correlation is in Body Temperature and Heart Rate with values of 0.14 and 0.18, respectively.
+   - Systolic BP and Diastolic BP are strongly correlated with a value of 0.8. As Systolic BP increases, Diastolic BP also tends to increase.
 
-3. **Boxplot of Blood Pressure by Risk Level**  
-   - Shows that higher systolic and diastolic pressures are more commonly associated with medium and high-risk classifications.
+3. **Boxplots**  
+   - Show the distribution of key numerical variables (e.g., blood pressure, heart rate) and help identify outliers.  
+   - Illustrate how some features vary across different risk levels.
 
-4. **Scatter Plot of Heart Rate vs. Age**  
-   - Displays a weak correlation but highlights some outliers with elevated heart rates in younger individuals.
+4. **Pair Plots**  
+   - Provide a grid of scatter plots for each feature combination, color-coded by risk level.  
+   - Help visualize feature clustering and separability by class.
 
-5. **Bar Plot of Risk Level Frequency**  
-   - Demonstrates that the dataset is fairly balanced across the three risk categories, allowing for effective supervised learning.
-
----
-
+5. **Histogram**
+   - It enabled us to see the class distribution, ensuring that there was no class imbalance.
+     
 ## 🗂 Files in This Section  
 
 - `cleaned_maternal_health_data.csv`: Final cleaned dataset used for model training and prediction.  
