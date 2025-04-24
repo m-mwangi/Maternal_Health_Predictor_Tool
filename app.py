@@ -1,0 +1,75 @@
+from fastapi import FastAPI, HTTPException
+from fastapi.responses import JSONResponse
+import pandas as pd
+import joblib
+import os
+import numpy as np
+from fastapi.middleware.cors import CORSMiddleware
+
+# Initialize FastAPI
+app = FastAPI()
+
+# Allow requests from your frontend origin
+#origins = [
+    #"http://127.0.0.1:5000",  # Flask frontend (local)
+    #"http://localhost:5000",  # Another possible local address
+    #"https://matern-ai-front-end.onrender.com",  # deployed frontend
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins = origins,  # Allows only specified origins
+    allow_credentials = True,
+    allow_methods = ["*"],  # Allows all HTTP methods
+    allow_headers = ["*"],  # Allows all headers
+)
+
+# Define model directory
+MODEL_DIR = "models"
+MODEL_PATH = os.path.join(MODEL_DIR, "random_forest_maternal_health.pkl")
+SCALER_PATH = os.path.join(MODEL_DIR, "scaler.pkl")
+
+# Load model and scaler
+if os.path.exists(MODEL_PATH) and os.path.exists(SCALER_PATH):
+    model = joblib.load(MODEL_PATH)
+    scaler = joblib.load(SCALER_PATH)
+else:
+    raise FileNotFoundError(f"Model or Scaler not found in {MODEL_DIR}!")
+
+@app.get("/")
+def home():
+    return {"message": "Maternal Health Risk Predictor API is Running!"}
+
+@app.post("/predict/")
+def predict(input_data: dict):
+    try:
+        # Extract the values from the input data (ensure they exist)
+        required_fields = ["Age", "SystolicBP", "DiastolicBP", "BS", "BodyTemp", "HeartRate"]
+        for field in required_fields:
+            if field not in input_data:
+                raise HTTPException(status_code=400, detail=f"{field} is required")
+
+        # Extracting feature values from input
+        Age = input_data["Age"]
+        SystolicBP = input_data["SystolicBP"]
+        DiastolicBP = input_data["DiastolicBP"]
+        BS = input_data["BS"]
+        BodyTemp = input_data["BodyTemp"]
+        HeartRate = input_data["HeartRate"]
+        
+        # Create input feature array
+        features = np.array([[Age, SystolicBP, DiastolicBP, BS, BodyTemp, HeartRate]])
+
+        # Scale the input features
+        features_scaled = scaler.transform(features)
+        
+        # Make a prediction
+        prediction = model.predict(features_scaled)[0]
+        
+        # Map numerical prediction to risk level
+        risk_mapping = {0: "low risk", 1: "mid risk", 2: "high risk"}
+        
+        return {"Predicted Risk Level": risk_mapping[prediction]}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
