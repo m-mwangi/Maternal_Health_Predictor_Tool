@@ -45,7 +45,7 @@ except Exception as e:
 
 @app.get("/")
 def home():
-    return {"message": "Maternal Health Risk Prediction API is Running!"}
+    return {"message": "Maternal Health Risk Predictor API is Running!"}
 
 @app.post("/predict/")
 def predict(Age: float, SystolicBP: float, DiastolicBP: float, BS: float, BodyTemp: float, HeartRate: float):
