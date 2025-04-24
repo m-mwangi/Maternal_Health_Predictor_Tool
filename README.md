@@ -19,26 +19,29 @@ The dataset was sourced from Kaggle
 ## Preprocessing Steps  
 To prepare the data for training, the following preprocessing steps were taken:
 
-- Handling Missing Values: Checked for null/missing values and confirmed none existed.  
-- Outlier Removal: Applied interquartile range (IQR) technique to identify and remove extreme outliers, particularly in heart rate and body temperature values.  
-- Categorical Encoding: The `RiskLevel` categorical feature (`Low`, `Medium`, `High`) was encoded into numerical labels (`0`, `1`, `2`) using Label Encoding.  
-- Feature Scaling: Standardization was applied using `StandardScaler` from scikit-learn to normalize the features.  
-- Data Splitting: The cleaned dataset was split into training and test sets (80% training, 20% testing) to evaluate model performance.  
+- Handling Missing Values - Checked for null/missing values and confirmed none existed.  
+- Outlier Removal - Applied interquartile range (IQR) technique to identify and remove extreme outliers, particularly in heart rate and body temperature values.  
+- Categorical Encoding - The `RiskLevel` categorical feature (`Low`, `Medium`, `High`) was encoded into numerical labels (`0`, `1`, `2`) using Label Encoding.  
+- Feature Scaling - Standardization was applied using `StandardScaler` from scikit-learn to normalize the features.  
+- Data Splitting - The cleaned dataset was split into training, validation, and test sets to evaluate model performance.  
 
-## 📈 Visualizations and Data Trends  
+## Visualizations and Data Trends  
 
 To better understand data trends and correlations between features, the following visualizations were created:
 
-1. **Histogram of Age Distribution**  
-   - Reveals a concentration of participants in the 20–35 age range, aligning with typical maternal ages.
+1. **Correlation Heatmap**
+   - Displays the correlation between various features in the dataset.
+   - There is a positive correlation between the input variables and the output variable.
+   - The strongest one is in Blood Sugar with 0.58 and the weakest correlation are in Body Temperature and Heart Rate with values of 0.14 and 0.18 respectively.
+   - Stystolic BP and Diastolic BP are strongly correlated with value of 0.8. As Systolic BP increases, Diastolic BP also tends to increase.
 
-2. **Boxplot of Blood Pressure by Risk Level**  
+3. **Boxplot of Blood Pressure by Risk Level**  
    - Shows that higher systolic and diastolic pressures are more commonly associated with medium and high-risk classifications.
 
-3. **Scatter Plot of Heart Rate vs. Age**  
+4. **Scatter Plot of Heart Rate vs. Age**  
    - Displays a weak correlation but highlights some outliers with elevated heart rates in younger individuals.
 
-4. **Bar Plot of Risk Level Frequency**  
+5. **Bar Plot of Risk Level Frequency**  
    - Demonstrates that the dataset is fairly balanced across the three risk categories, allowing for effective supervised learning.
 
 ---
