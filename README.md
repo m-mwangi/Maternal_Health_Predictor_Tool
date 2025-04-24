@@ -4,7 +4,8 @@ MaternAI is an ML-powered application designed to predict maternal health risks.
 
 ## Data Sources and Collection Methods  
 
-The dataset was sourced from the 🔗 [Maternal Health Risk Dataset](https://www.kaggle.com/datasets/csafrit2/maternal-health-risk-data/data)  
+The dataset was sourced from Kaggle
+🔗 [Maternal Health Risk Dataset](https://www.kaggle.com/datasets/csafrit2/maternal-health-risk-data/data)  
 
 It contains the following features:
 - Age  
