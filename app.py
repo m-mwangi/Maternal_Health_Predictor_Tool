@@ -12,7 +12,7 @@ app = FastAPI()
 origins = [
     "http://127.0.0.1:5000",  # Flask frontend (local)
     "http://localhost:5000",  # Another possible local address
-    "https://matern-ai-front-end.onrender.com",  # deployed frontend
+    "https://health-predictor-tool.onrender.com",  # deployed frontend
 ]
 
 app.add_middleware(
@@ -39,9 +39,9 @@ try:
     else:
         raise FileNotFoundError(f"Model or Scaler not found in {MODEL_DIR}!")
 except FileNotFoundError as e:
-    raise HTTPException(status_code=500, detail=str(e))
+    raise HTTPException(status_code = 500, detail = str(e))
 except Exception as e:
-    raise HTTPException(status_code=500, detail=f"Error loading the model or scaler: {str(e)}")
+    raise HTTPException(status_code = 500, detail = f"Error loading the model or scaler: {str(e)}")
 
 @app.get("/")
 def home():
@@ -66,4 +66,4 @@ def predict(Age: float, SystolicBP: float, DiastolicBP: float, BS: float, BodyTe
         
         return {"Predicted Risk Level": risk_mapping[prediction]}
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error during prediction: {str(e)}")
+        raise HTTPException(status_code = 500, detail = f"Error during prediction: {str(e)}")
