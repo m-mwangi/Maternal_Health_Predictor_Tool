@@ -20,20 +20,20 @@ body {
 
 /* Bullet Point Fix */
 .about-data ul {
-    list-style-type: none; /* Remove default bullets */
+    list-style-type: none; 
     padding: 0;
-    margin: 10px auto; /* Centering */
-    max-width: 600px; /* Ensures text is not stretched */
-    text-align: left; /* Align text properly */
+    margin: 10px auto; 
+    max-width: 600px; 
+    text-align: left; 
 }
 
 .about-data li {
     font-size: 1rem;
     color: #333;
-    margin-bottom: 8px; /* Reduces excessive spacing */
+    margin-bottom: 8px; 
     display: flex;
-    align-items: center; /* Aligns bullet points with text */
-    gap: 10px; /* Adds spacing between bullet and text */
+    align-items: center; 
+    gap: 10px; 
 }
 
 /* Custom Bullet Point */
@@ -65,7 +65,7 @@ body {
 header {
     width: 100%;
     padding: 20px;
-    background-color: #001f3f; /* Changed from white to light gray */
+    background-color: #001f3f; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -77,9 +77,9 @@ header {
 }
 
 .logo {
-    width: 100px; /* Reduced size */
-    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2)); /* Add a drop shadow */
-    opacity: 0.9; /* Slightly reduce opacity for blending effect */
+    width: 100px;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2)); 
+    opacity: 0.9; 
 }
 
 .header-right a {
@@ -100,28 +100,26 @@ header {
     color: #ff9a9e; /* Light pink */
 }
 
-/* 🔹 Hero Section - Make Image Cover the Full Screen */
 .container1 img.landing {
     width: 100%;
-    height: 100vh; /* Full-screen height */
-    object-fit: cover; /* Ensures full coverage without stretching */
+    height: 100vh; 
+    object-fit: cover; 
     display: block;
 }
 
-/* 🔹 What We Offer - Resize Icons */
+/* What We Offer
 .icon {
-    width: 90px; /* Standardized size for all icons */
+    width: 90px; 
     height: 90px; 
-    object-fit: contain; /* Ensures no distortion */
+    object-fit: contain; 
     margin-bottom: 15px;
 }
 
-/* 🔹 Align Text & Images in What We Offer */
 #services .row {
     display: flex;
-    justify-content: space-between; /* Space out sections evenly */
-    align-items: center; /* Align images and text properly */
-    flex-wrap: wrap; /* Ensure responsiveness */
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
     text-align: center;
 }
 
@@ -130,28 +128,26 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 250px; /* Ensures uniform section height */
+    min-height: 250px; 
 }
 
-/* 🔹 Standardize All Images */
 #services .col-md-3 img {
-    width: 80px; /* Ensures equal width */
-    height: auto; /* Maintains aspect ratio */
-    margin-bottom: 10px; /* Adds spacing */
+    width: 80px; 
+    height: auto; 
+    margin-bottom: 10px; 
 }
 
-/* 🔹 Improve Responsiveness for Smaller Screens */
 @media (max-width: 768px) {
     .container1 img.landing {
-        height: 50vh; /* Reduce image height for smaller screens */
+        height: 50vh; 
     }
 
     #services .row {
-        flex-direction: column; /* Stack items for mobile */
+        flex-direction: column; 
     }
 
     .icon {
-        width: 70px; /* Adjust icon size for smaller screens */
+        width: 70px; 
         height: 70px;
     }
 }
@@ -159,16 +155,16 @@ header {
 
 /* Hero Section */
 .container1 img.landing {
-    width: 100%; /* Full width */
-    max-height: 65vh; /* Limit the height to 50% of the viewport height */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
+    width: 100%; 
+    max-height: 65vh;
+    height: auto; 
+    object-fit: cover;
 }
 
 /* Heading styles */
 .headingtitle {
     text-align: center;
-    font-size: 2.5rem; /* Increased font size for better visibility */
+    font-size: 2.5rem; 
     font-weight: bold;
     color: #3f51b5; /* Indigo */
     margin-bottom: 10px;
@@ -354,9 +350,9 @@ footer .else ul li a:hover {
 
 .fact-row {
     display: flex;
-    justify-content: center; /* Align items centrally */
-    gap: 10px; /* Reduce horizontal space between cells */
-    width: 100%; /* Ensure rows span full width */
+    justify-content: center; 
+    gap: 10px; 
+    width: 100%; 
 }
 
 .fact-cell {
@@ -401,7 +397,7 @@ footer .else ul li a:hover {
     }
 
     .fact-cell {
-        max-width: 100%; /* Full width for small screens */
+        max-width: 100%; 
     }
 }
 
@@ -428,7 +424,7 @@ footer .else ul li a:hover {
 }
 
 .arrow-icon {
-    font-size: 2rem; /* Adjust size */
+    font-size: 2rem; 
     color: #003366; /* Blue arrow */
     display: block;
     text-align: center;
@@ -436,7 +432,7 @@ footer .else ul li a:hover {
     animation: bounce 1.5s infinite;
 }
 
-/* Optional: Add a bounce effect */
+/* Add a bounce effect */
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -485,12 +481,12 @@ footer .else ul li a:hover {
     text-align: center;
     line-height: 1.6;
     max-width: 700px;
-    margin: 0 auto 40px; /* Adds spacing below the description */
+    margin: 0 auto 40px; 
 }
 
 /* Details Section */
 .details-section {
-    background-color: #f0f8ff; /* Light blue */
+    background-color: #f0f8ff; 
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -500,7 +496,7 @@ footer .else ul li a:hover {
 .details-section .section-title {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #3f51b5; /* Indigo */
+    color: #3f51b5;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -513,21 +509,21 @@ footer .else ul li a:hover {
 }
 
 .details-list li {
-    margin-bottom: 15px; /* Space between items */
+    margin-bottom: 15px; 
     display: flex;
     align-items: center;
 }
 
 .details-list li strong {
-    color: #3f51b5; /* Indigo */
+    color: #3f51b5; 
     margin-right: 10px;
 }
 
-/* Adding icons next to each list item (optional) */
+/* Adding icons next to each list item */
 .details-list li::before {
-    content: '\2022'; /* Bullet point */
+    content: '\2022'; 
     font-size: 1.5rem;
-    color: #3f51b5; /* Indigo */
+    color: #3f51b5; 
     margin-right: 10px;
 }
 
@@ -541,7 +537,7 @@ footer .else ul li a:hover {
 }
 
 .form-container h4 {
-    color: #3f51b5; /* Indigo */
+    color: #3f51b5; 
     text-align: center;
     margin-bottom: 20px;
 }
@@ -570,7 +566,7 @@ footer .else ul li a:hover {
 }
 
 .form-container button {
-    background-color: #3f51b5; /* Indigo */
+    background-color: #3f51b5; 
     color: #fff;
     border: none;
     transition: background-color 0.3s;
@@ -581,15 +577,15 @@ footer .else ul li a:hover {
 }
 
 .form-container button:hover {
-    background-color: #ff6f61; /* Coral pink */
+    background-color: #ff6f61; 
 }
 
 /* Retrain section */
 .retrain-container {
-    width: 90%; /* Increase width for better fit */
-    max-width: 1200px; /* Ensure it doesn't stretch too wide */
+    width: 90%; 
+    max-width: 1200px; 
     margin: 0 auto;
-    padding: 30px; /* Reduce padding to fit content */
+    padding: 30px; 
     text-align: center;
     animation: fadeIn 2s ease-out;
 }
@@ -599,61 +595,61 @@ footer .else ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Reduce space */
-    flex-wrap: wrap; /* Ensure proper wrapping */
+    margin-top: 20px; 
+    flex-wrap: wrap; 
 }
 
 /* Step size adjustments */
 .step {
     text-align: center;
     flex: 1;
-    margin: 10px; /* Reduce margin */
-    min-width: 250px; /* Adjust to avoid overflow */
-    max-width: 350px; /* Keep steps uniform */
+    margin: 10px; 
+    min-width: 250px; 
+    max-width: 350px; 
     box-sizing: border-box;
 }
 
 /* Adjusted Circle Size */
 .circle {
-    width: 280px; /* Ensure proper size */
+    width: 280px; 
     height: 280px;
     background-color: #3f51b5;
     color: #fff;
     border-radius: 50%;
-    padding: 10px; /* Reduce padding */
+    padding: 10px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Ensure text stays inside */
+    text-align: center; 
     font-size: 1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin: 15px;
-    overflow: hidden; /* Prevent text from spilling */
-    word-wrap: break-word; /* Ensure long words wrap properly */
+    overflow: hidden; 
+    word-wrap: break-word; 
 }
 
 /* Ensure text fits inside */
 .circle h3 {
-    font-size: 1.1rem; /* Reduce text size slightly */
+    font-size: 1.1rem; 
     color: #fff;
     margin-bottom: 5px;
-    padding: 0 10px; /* Add small padding */
-    line-height: 1.2; /* Reduce line spacing */
+    padding: 0 10px; 
+    line-height: 1.2; 
 }
 
 .circle p {
-    font-size: 0.9rem; /* Reduce size further */
+    font-size: 0.9rem; 
     color: #fff;
     text-align: center;
-    padding: 0 15px; /* Ensure text doesn’t touch edges */
-    line-height: 1.3; /* Adjust line height */
+    padding: 0 15px;
+    line-height: 1.3; 
 }
 
 /* Responsive Fixes */
 @media (max-width: 768px) {
     .circle {
-        width: 220px; /* Reduce size on small screens */
+        width: 220px; 
         height: 220px;
         font-size: 0.8rem;
         padding: 5px;
@@ -673,7 +669,7 @@ footer .else ul li a:hover {
 
 /* Adjust Arrow */
 .arrow {
-    font-size: 1.8rem; /* Reduce size */
+    font-size: 1.8rem; 
     color: #3f51b5;
     margin: 10px;
 }
@@ -685,29 +681,29 @@ footer .else ul li a:hover {
 }
 
 .get-started h3 {
-    font-size: 1.8rem; /* Reduce font size */
+    font-size: 1.8rem; 
     color: #3f51b5;
     margin-bottom: 15px;
 }
 
 .get-started p {
-    font-size: 1rem; /* Reduce text size */
+    font-size: 1rem; 
     color: #555;
 }
 
 /* Responsive Fixes */
 @media (max-width: 768px) {
     .retrain-container {
-        width: 95%; /* Use more screen space on small screens */
+        width: 95%; 
     }
 
     .circle-steps {
-        flex-direction: column; /* Stack circles */
+        flex-direction: column; 
         align-items: center;
     }
 
     .circle {
-        width: 220px; /* Reduce further for small screens */
+        width: 220px; 
         height: 220px;
         font-size: 0.8rem;
     }
@@ -754,7 +750,7 @@ footer .else ul li a:hover {
 
 .clear-button {
     padding: 10px 20px;
-    background-color: #ff4c4c; /* Red */
+    background-color: #ff4c4c;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -765,7 +761,7 @@ footer .else ul li a:hover {
 }
 
 .clear-button:hover {
-    background-color: #ff6666; /* Light red */
+    background-color: #ff6666; 
 }
 
 .retrain-section {
@@ -774,7 +770,7 @@ footer .else ul li a:hover {
 }
 
 .retrain-button {
-    background-color: #3f51b5; /* Indigo */
+    background-color: #3f51b5; 
     color: #fff;
     padding: 15px 25px;
     font-size: 1.2rem;
@@ -787,7 +783,7 @@ footer .else ul li a:hover {
 }
 
 .retrain-button:hover {
-    background-color: #ff6f61; /* Coral pink */
+    background-color: #ff6f61; 
 }
 
 .progress-container {
@@ -800,7 +796,7 @@ footer .else ul li a:hover {
 .progress-bar {
     width: 0%;
     height: 10px;
-    background-color: #3f51b5; /* Indigo */
+    background-color: #3f51b5; 
     border-radius: 5px;
     margin-bottom: 10px;
     transition: width 2s ease-in-out;
@@ -809,7 +805,7 @@ footer .else ul li a:hover {
 .result-message {
     margin-top: 30px;
     font-size: 1.5rem;
-    color: #3f51b5; /* Indigo */
+    color: #3f51b5; 
     text-align: center;
     opacity: 0;
     animation: fadeIn 2s forwards;
@@ -870,8 +866,8 @@ footer .else ul li a:hover {
 .heading {
     text-align: center;
     padding: 50px;
-    background: #FFFFFF; /* Light blue */
-    color: #3f51b5; /* Indigo */
+    background: #FFFFFF; 
+    color: #3f51b5; 
 }
 .heading h1 {
     font-size: 3rem;
@@ -892,7 +888,7 @@ footer .else ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 15px;
-    width: 280px; /* Reduced width */
+    width: 280px; 
     text-align: center;
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -905,7 +901,7 @@ footer .else ul li a:hover {
     border-radius: 10px;
     width: 100%;
     height: auto;
-    max-height: 150px; /* Reduced max height */
+    max-height: 150px; 
     object-fit: contain;
 }
 .card img:hover::after {
