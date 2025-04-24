@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = "uploads"
 app.secret_key = "your_secret_key"
 
-FASTAPI_PREDICT_URL = "https://maternal-health-predictor-tool.onrender.com/predict"
+FASTAPI_PREDICT_URL = "https://maternai-api-m9q7.onrender.com/predict"
 
 # Ensure upload directory exists
 if not os.path.exists(app.config["UPLOAD_FOLDER"]):
