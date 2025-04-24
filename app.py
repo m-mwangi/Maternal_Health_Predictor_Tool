@@ -10,10 +10,10 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 # Allow requests from your frontend origin
-#origins = [
-    #"http://127.0.0.1:5000",  # Flask frontend (local)
-    #"http://localhost:5000",  # Another possible local address
-    #"https://matern-ai-front-end.onrender.com",  # deployed frontend
+origins = [
+    "http://127.0.0.1:5000",  # Flask frontend (local)
+    "http://localhost:5000",  # Another possible local address
+    "https://matern-ai-front-end.onrender.com",  # deployed frontend
 ]
 
 app.add_middleware(
