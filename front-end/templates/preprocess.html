@@ -28,7 +28,7 @@
             <h2 class="section-title text-center">Understanding the Dataset</h2>
             <p class="text-center mt-3">
                 The dataset used for maternal health risk prediction was sourced from <strong>Kaggle</strong> 
-                and comprises <strong>1,014 records</strong> with <strong>6 key health indicators</strong> and a target classification.
+                and comprises <strong>1,218 records</strong> with <strong>6 key health indicators</strong> and a target classification.
             </p>
             <p class="text-center">
                 The features included in this dataset are:
@@ -57,7 +57,7 @@
                     </div>
                     <div class="outer-box">
                         <div class="count-outer count-box">
-                            <span class="count-text"><span>1014</span></span>
+                            <span class="count-text"><span>1218</span></span>
                         </div>
                         <div class="title"><p>Rows</p></div>
                     </div>
@@ -98,7 +98,7 @@
                     </div>
                     <div class="outer-box">
                         <div class="count-outer count-box">
-                            <span class="count-text"><span>433</span></span>
+                            <span class="count-text"><span>133</span></span>
                         </div>
                         <div class="title"><p>Outliers Detected</p></div>
                     </div>
@@ -197,10 +197,19 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container text-center py-4">
-            <p>&copy; 2025 Maternal Health Risk Prediction Project. All rights reserved.</p>
+    <footer class="footer">
+        <div class="copyright">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="" />
+            <h2>&copy; 2025 | MaternAI: Smarter Maternal Health</h2>
+        </div>
+        <div class="else">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a class="active" href="{{ url_for('preprocess') }}">Pre-process</a></li>
+                <li><a href="{{ url_for('predict') }}">Predict</a></li>
+            </ul>
         </div>
     </footer>
+
 </body>
 </html>
