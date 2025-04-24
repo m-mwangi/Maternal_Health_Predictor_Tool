@@ -25,7 +25,7 @@ To prepare the data for training, the following preprocessing steps were taken:
 - Feature Scaling - Standardization was applied using `StandardScaler` from scikit-learn to normalize the features.  
 - Data Splitting - The cleaned dataset was split into training, validation, and test sets to evaluate model performance.  
 
-## Visualizations and Data Trends  
+## Visualizations  
 
 To better understand data trends and correlations between features, the following visualizations were created:
 
