@@ -24,8 +24,13 @@ MaternAI is a machine learning-powered application designed to predict maternal 
 3. **Output**  
    The predicted risk level is displayed to the user.
 
-## Technologies Used
+## Deployed API (SwaggerUI)
+https://maternai-api-m9q7.onrender.com/docs
 
+## MaternAI Live Web Application
+https://health-predictor-tool.onrender.com/
+
+## Technologies Used
 - **Frontend**: HTML, CSS, JavaScript, Flask
 - **Backend**: Python, FastAPI, Scikit-learn
 - **Model**: Random Forest Classifier
