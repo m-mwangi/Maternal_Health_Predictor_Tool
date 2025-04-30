@@ -36,5 +36,37 @@ https://health-predictor-tool.onrender.com/
 - **Model**: Random Forest Classifier
 - **Deployment**: Render.com
 
+## How to setup the project locally
+### Prerequisites
+Before you begin, make sure you have the following installed:
 
-## 
+- Python 3.7+
+- pip (Python's package installer)
+
+### Download the Project
+- Download the ZIP file of the project from Canvas.
+- Extract the contents of the ZIP file to a location of your choice.
+
+### Create a Virtual Environment
+1. Open a terminal (or Command Prompt) in the extracted project folder.
+2. Create a virtual environment by running:
+
+   ```bash
+   python -m venv venv
+
+source venv/bin/activate     # On Windows: venv\Scripts\activate
+
+### Install Dependencies
+```bash
+pip install -r requirements.txt
+
+```
+### Launch the Web App locally
+Run this command:
+```bash
+python app.py
+```
+
+This will run the web app locally on 
+
+
