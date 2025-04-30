@@ -54,19 +54,28 @@ Before you begin, make sure you have the following installed:
    ```bash
    python -m venv venv
 
-source venv/bin/activate     # On Windows: venv\Scripts\activate
+   source venv/bin/activate     # On Windows: venv\Scripts\activate
 
 ### Install Dependencies
 ```bash
 pip install -r requirements.txt
 
 ```
-### Launch the Web App locally
+### Launch the API locally
 Run this command:
+```bash
+uvicorn app:app --reload
+```
+This will run the API locally on http://127.0.0.1:8000/docs
+
+### Launch the Web App locally
+You have to navigate to the front-end sub folder.
+Then run this command:
 ```bash
 python app.py
 ```
+This will run the Web App locally on http://127.0.0.1:5000
 
-This will run the web app locally on 
+
 
 
