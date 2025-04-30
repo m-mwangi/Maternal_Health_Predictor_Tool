@@ -66,7 +66,7 @@ In the project root directory, run:
 ```bash
 uvicorn app:app --reload
 ```
-This will start the API locally on http://127.0.0.1:8000/docs
+This will start the API locally on http://127.0.0.1:8000
 
 ### Launch the Web App locally
 Navigate to the front-end folder, then run this command:
