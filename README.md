@@ -62,20 +62,15 @@ pip install -r requirements.txt
 
 ```
 ### Launch the API locally
-Run this command:
+In the project root directory, run:
 ```bash
 uvicorn app:app --reload
 ```
-This will run the API locally on http://127.0.0.1:8000/docs
+This will start the API locally on http://127.0.0.1:8000/docs
 
 ### Launch the Web App locally
-You have to navigate to the front-end sub folder.
-Then run this command:
+Navigate to the front-end folder, then run this command:
 ```bash
 python app.py
 ```
-This will run the Web App locally on http://127.0.0.1:5000
-
-
-
-
+This will start the Web App locally on http://127.0.0.1:5000
